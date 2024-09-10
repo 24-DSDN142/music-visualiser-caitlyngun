@@ -23,6 +23,7 @@ line (950,600,850,550)
 line(600,550,850,550)
 
 //radio outline - darkest colours to brightest
+noFill()
 strokeWeight(15)
 stroke(36, 6, 23)
 rect(425,300,600,300)
@@ -94,6 +95,85 @@ circle(440,315,10) //left top
 circle(440,585,10) //left bottom
 circle(1010,315,10) //right top
 circle(1010,585,10) //right bottom
+
+// corner x's
+
+//left x
+line (470,570,480,560)
+line (470,560,480,570)
+
+//right x
+line (980,570,990,560)
+line(980,560,990,570)
+
+
+//bottom rect - from left to right
+noStroke()
+
+//rect1
+let rect1 = map (other, 0,100,20,90)
+fill(196, 10, 113)
+rect(470,650,25,rect1)
+
+
+//rect2
+let rect2 = map (other,0,100,10,200)
+fill(255, 23, 151)
+rect(520,650,25,rect2)
+
+//rect3
+let rect3 = map (other,0,100,5,120)
+fill(255, 54, 165)
+rect(570,650,25,rect3)
+
+//rect4
+let rect4 = map (other, 0,100,30,250)
+fill(252, 73, 172)
+rect(620,650,25,rect4)
+
+//rect5
+let rect5 = map (other, 0,100, 10,100)
+fill(252, 101, 185)
+rect(670,650,25,rect5)
+
+//rect6
+let rect6 = map (other, 0,100, 10,60)
+fill(255, 117, 194)
+rect(720,650,25,rect6)
+
+
+//rect7
+let rect7 = map (other, 0, 100, 10, 25)
+fill(252, 131, 199)
+rect(770,650,25,rect7)
+
+
+
+// voice
+
+//rect8
+let rect8 = map (vocal, 0,100,10,120)
+fill(255, 156, 211)
+rect(820,650,25,rect8)
+
+//rect9
+let rect9 = map (vocal, 0, 100, 5, 200)
+fill(255, 179, 221)
+rect(870,650,25,rect9)
+
+//rect10
+let rect10 = map (vocal, 0,100,15,160)
+fill(255, 201, 231)
+rect(920,650,25,rect10)
+
+//rect11
+let rect11 = map (vocal, 0, 100, 5,80)
+fill (255, 235, 246)
+rect(970,650,25,rect11)
+
+
+
+
 
 
 }
