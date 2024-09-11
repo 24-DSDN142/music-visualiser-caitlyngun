@@ -46,6 +46,8 @@ function preload() {
 
   // //load image to background
  img = loadImage('background2.jpg')
+ img2 = loadImage ("buildings.png")
+ img3 = loadImage ('buildingscopy.png')
 }
 
 let volumes = [];
