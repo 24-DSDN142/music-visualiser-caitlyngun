@@ -8,12 +8,16 @@ function setup() {
 }
 
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-background(0,0,0) //black
+background(53,65,21) //black
 //textFont('verdana')
 
 textSize(24)
 
-
+//background
+// push();
+// scale(0.2);
+// image(img, 0, -100);
+// pop();
 
 //part at bottom of rect
 stroke(255, 23, 151) //pink
@@ -107,14 +111,13 @@ line (980,570,990,560)
 line(980,560,990,570)
 
 
-//bottom rect - from left to right
+//bottom rectangles - from left to right
 noStroke()
 
 //rect1
 let rect1 = map (other, 0,100,20,90)
 fill(196, 10, 113)
 rect(470,650,25,rect1)
-
 
 //rect2
 let rect2 = map (other,0,100,10,200)
@@ -141,13 +144,10 @@ let rect6 = map (other, 0,100, 10,60)
 fill(255, 117, 194)
 rect(720,650,25,rect6)
 
-
 //rect7
 let rect7 = map (other, 0, 100, 10, 25)
 fill(252, 131, 199)
 rect(770,650,25,rect7)
-
-
 
 // voice
 
