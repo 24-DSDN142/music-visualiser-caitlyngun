@@ -1,21 +1,21 @@
-
+// for the background
 let img;
 let firstRun = true;
-
+//for the first buildings
 let img2;
 let firstRun2 = true;
-
+//for the second buildings
 let img3;
 let firstRun3 = true;
 
 
-var buildingsMove = 1;
- var buildingsCopy = 1;
+var buildingsMove = 1; //building one to move
+ var buildingsCopy = 1; //building two to move
 
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
 background(0,0,0) 
 if (firstRun) {
-  img = loadImage ("background2.jpg")
+  img = loadImage ("background2.jpg") //load background image
   firstRun = false
 }
 
@@ -27,17 +27,17 @@ pop();
 
 //building 1
 if (firstRun2) {
-  img2 = loadImage ("buildings.png")
+  img2 = loadImage ("buildings.png") //load first building image
   firstRun2 = false
 }
 
 push();
 scale(2);
-tint(255,230)
-image(img2,800-buildingsMove,-105);
-buildingsMove = buildingsMove +1;
+tint(255,230) //lower the opacity
+image(img2,800-buildingsMove,-105); //the starting point for the buildings to move
+buildingsMove = buildingsMove +1; 
  
-if (buildingsMove > 1840) {
+if (buildingsMove > 1840) { //resetting the buildings to its original postion when off the screen
   buildingsMove = -15
 }
 pop();
@@ -45,17 +45,17 @@ pop();
 
 //building 2
 if (firstRun3) {
-  img3 = loadImage ("buildingscopy.png")
+  img3 = loadImage ("buildingscopy.png") //load second building image
   firstRun3 = false
 }
 
 push();
 scale(2);
 tint(255,230)
-image(img2,1730-buildingsCopy,-105);
+image(img2,1730-buildingsCopy,-105); //the starting point for second image
 buildingsCopy = buildingsCopy +1;
  
-if (buildingsCopy > 2670) {
+if (buildingsCopy > 2670) { //resetting buildings to starting position when it is off the screen
   buildingsCopy = 800
 }
 pop();
@@ -64,9 +64,9 @@ pop();
 //weird line part at bottom of rectangle
 stroke(255,255,255) //white
 strokeWeight(3)
-line(500,600,600,550)
-line (950,600,850,550)
-line(600,550,850,550)
+line(500,600,600,550) //left line
+line (950,600,850,550) //right line
+line(600,550,850,550) //top line
 
 //radio outline - darkest colours to brightest
 noFill()
@@ -152,7 +152,7 @@ fill(97, 131, 255) // light blue
 
 let LspinAmount = map (drum, 0, 100, -0,-360) //rotate with drum
 push()
-translate(655,400)
+translate(655,400) //resetting 0,0 value for rotation
 rotate(LspinAmount)
 square(-13,-12,25)
 pop()
@@ -161,7 +161,7 @@ pop()
 
 let RspinAmount = map (bass, 0, 100, 0,360) // rotate the other way with bass
 push()
-translate(845,400)
+translate(845,400) //resetting 0,0 value for rotation
 rotate(RspinAmount)
 square(-10,-10,18)
 pop()
@@ -241,7 +241,8 @@ rect(970,650,25,rect11)
 
 //top rectangles - vocal
 // from left to right
-// (because it gets larger from the top left corner, make all values negative to change shape downwards.)
+// (because it gets larger from the top left corner, 
+// make all values negative to change shape to 'grow' downwards.)
 
 //rect1
 let rect1A = map (vocal, 0,100,-20,-90) //all top rectangles grow larger with vocal
