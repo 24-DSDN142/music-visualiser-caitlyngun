@@ -1,5 +1,5 @@
-const canvasWidth = 2000;
-const canvasHeight = 1500;
+const canvasWidth = 1500;
+const canvasHeight = 1000;
 
 
 let mainCanvas;
@@ -8,7 +8,7 @@ let textInput;
 let slider1, slider2, slider3, slider4;
 let songButton;
 
-let editorMode = false;          // false when in song mode
+let editorMode = true;          // false when in song mode
 let songLoadStatus = "loading"; // "error", "loaded"
 let song;
 let songIsPlaying = false;
@@ -45,7 +45,7 @@ function preload() {
   words = loadStrings('words.txt');
 
   // //load image to background
-//   img = loadImage('background.jpg')
+ img = loadImage('background2.jpg')
 }
 
 let volumes = [];

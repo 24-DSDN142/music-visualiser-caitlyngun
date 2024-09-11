@@ -1,23 +1,30 @@
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 
-function setup() {
-  createCanvas (400,400) ; 
-  background(170);
-  strokeWeight(4);
-}
+// function setup() {
+//   createCanvas (400,400) ; 
+//   background(170);
+//   strokeWeight(4);
+// }
+
+let img;
+let firstRun = true;
 
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-background(53,65,21) //black
+background(0,0,0) //black
 //textFont('verdana')
+if (firstRun) {
+  img = loadImage ("background2.jpg")
+  firstRun = false
+}
 
 textSize(24)
 
 //background
-// push();
-// scale(0.2);
-// image(img, 0, -100);
-// pop();
+push();
+scale(1.7);
+image(img, 0, 0);
+pop();
 
 //part at bottom of rect
 stroke(255, 23, 151) //pink
@@ -140,40 +147,93 @@ fill(252, 101, 185)
 rect(670,650,25,rect5)
 
 //rect6
-let rect6 = map (other, 0,100, 10,60)
+let rect6 = map (other, 0,100, 10,340)
 fill(255, 117, 194)
 rect(720,650,25,rect6)
 
 //rect7
-let rect7 = map (other, 0, 100, 10, 25)
+let rect7 = map (other, 0, 100, 10, 300)
 fill(252, 131, 199)
 rect(770,650,25,rect7)
 
-// voice
-
 //rect8
-let rect8 = map (vocal, 0,100,10,120)
+let rect8 = map (other, 0,100,10,120)
 fill(255, 156, 211)
 rect(820,650,25,rect8)
 
 //rect9
-let rect9 = map (vocal, 0, 100, 5, 200)
+let rect9 = map (other, 0, 100, 5, 200)
 fill(255, 179, 221)
 rect(870,650,25,rect9)
 
 //rect10
-let rect10 = map (vocal, 0,100,15,160)
+let rect10 = map (other, 0,100,15,160)
 fill(255, 201, 231)
 rect(920,650,25,rect10)
 
 //rect11
-let rect11 = map (vocal, 0, 100, 5,80)
+let rect11 = map (other, 0, 100, 5,80)
 fill (255, 235, 246)
 rect(970,650,25,rect11)
 
 
 
+//top rectangles - vocal
 
+//rect1
+let rect1A = map (vocal, 0,100,-20,-90)
+fill(196, 10, 113)
+rect(470,250,25,rect1A)
+
+//rect2
+let rect2A = map (vocal,0,100,-10,-200)
+fill(255, 23, 151)
+rect(520,250,25,rect2A)
+
+// //rect3
+let rect3A = map (vocal,0,100,-5,-120)
+fill(255, 54, 165)
+rect(570,250,25,rect3A)
+
+// //rect4
+let rect4A = map (vocal, 0,100,-30,-250)
+fill(252, 73, 172)
+rect(620,250,25,rect4A)
+
+// //rect5
+let rect5A = map (vocal, 0,100, -10,-100)
+fill(252, 101, 185)
+rect(670,250,25,rect5A)
+
+// //rect6
+let rect6A = map (vocal, 0,100, -10,-340)
+fill(255, 117, 194)
+rect(720,250,25,rect6A)
+
+// //rect7
+let rect7A = map (vocal, 0, 100, -10, -300)
+fill(252, 131, 199)
+rect(770,250,25,rect7A)
+
+// //rect8
+let rect8A = map (vocal, 0,100,-10,-120)
+fill(255, 156, 211)
+rect(820,250,25,rect8A)
+
+// //rect9
+let rect9A = map (vocal, 0, 100, -5, -200)
+fill(255, 179, 221)
+rect(870,250,25,rect9A)
+
+// //rect10
+let rect10A = map (vocal, 0,100,-15,-160)
+fill(255, 201, 231)
+rect(920,250,25,rect10A)
+
+// //rect11
+let rect11A = map (vocal, 0, 100, -5,-80)
+fill (255, 235, 246)
+rect(970,250,25,rect11A)
 
 
 }
